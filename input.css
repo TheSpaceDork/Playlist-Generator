@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.staru {
+  background-image: url("./assets/Star 3.png");
+  background-repeat: no-repeat;
+  background-position: 0 45px;
+  background-size: contain;
+  overflow: visible;
+}
+#moodImage {
+  transition: transform 0.3s ease-in-out;
+}
+#moodImage.scale {
+  transform: scale(1);
+}
+@media screen and (min-width: 380px) {
+  .lastsection {
+    height: 105vh;
+  }
+  .steptwo {
+    height: 110vh;
+  }
+  .stepone {
+    height: 110vh;
+  }
+}
