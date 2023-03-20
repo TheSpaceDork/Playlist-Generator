@@ -15,12 +15,13 @@
       src="https://kit.fontawesome.com/9a417ab140.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./main.js" defer></script>
     <title>Playlist generator</title>
   </head>
 
   <body>
     <section
-      class="bg-[#FC5130] w-screen h-[140vh] lg:h-screen px-4 lg:px-40 py-12 stepone"
+      class="bg-[#FC5130] w-screen h-[140vh] lg:h-screen px-4 lg:px-40 py-12 stepone relative"
     >
       <div
         class="rounded-full bg-black text-[#F4F1BB] px-6 py-2 inline-block text-lg font-semibold"
@@ -39,9 +40,10 @@
             based on your listening history.
           </p>
           <button
+            onclick="requestAuthorization()"
             class="rounded-full px-5 py-2 bg-[#1ED760] text-[#181818] font-semibold mx-auto"
           >
-            <a href="./steptwo.html">Link your spotify account</a>
+            <a>Link your spotify account</a>
           </button>
         </div>
         <!-- image div -->
@@ -58,6 +60,16 @@
           />
         </div>
       </div>
+      <footer
+        class="absolute bottom-0 right-0 left-0 w-full bg-black h-[8rem] items-center lg:h-[4rem] flex flex-col lg:flex-row justify-between px-8 py-5 text-md font-semibold"
+      >
+        <p class="text-[#F4F1BB] cursor-pointer">Credits</p>
+        <p class="text-[#1ED760] cursor-pointer">Powered by Spotify</p>
+        <div class="space-x-4 text-[#F4F1BB] flex">
+          <p class="cursor-pointer">Github</p>
+          <p class="cursor-pointer">Twitter</p>
+        </div>
+      </footer>
     </section>
   </body>
 </html>
