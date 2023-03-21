@@ -24,6 +24,14 @@ body {
 #moodImage.scale {
   transform: scale(1);
 }
+span#user {
+  font-size: 1.5rem !important;
+  color: #1ed760 !important;
+}
+.user {
+  font-size: 1.5rem !important;
+  color: #1ed760 !important;
+}
 @media screen and (min-width: 380px) {
   .lastsection {
     height: 105vh;
