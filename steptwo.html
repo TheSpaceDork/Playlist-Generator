@@ -20,7 +20,7 @@
   </head>
   <body>
     <section
-      class="bg-[#001514] w-screen h-[150vh] lg:h-screen px-4 lg:px-40 py-12 steptwo"
+      class="bg-[#001514] w-screen h-[150vh] lg:h-screen px-4 lg:px-40 py-12 steptwo relative"
     >
       <div
         class="rounded-full bg-black text-[#F4F1BB] px-6 py-2 w-[8rem] inline-block text-lg font-semibold mx-auto lg:mx-0"
@@ -31,7 +31,11 @@
         class="w-full flex flex-col lg:flex-row mt-[4rem] lg:mt-[8rem] justify-between items-center space-y-6 lg:space-y-0"
       >
         <div class="w-full lg:w-[70%]">
-          <h1 class="text-[#F4F1BB] text-5xl font-semibold">
+          <div class="font-semibold flex space-x-4 items-center">
+            <span class="text-[#F4F1BB] text-xl">Hey,</span>
+            <span id="user" class="user">..</span>
+          </div>
+          <h1 class="text-[#F4F1BB] text-5xl font-semibold mt-3">
             Whats your mood today ?
           </h1>
           <p class="text-[#F4F1BB] mt-6">
@@ -104,6 +108,16 @@
           </div>
         </div>
       </div>
+      <footer
+        class="absolute bottom-0 right-0 left-0 w-full bg-black h-[8rem] items-center lg:h-[4rem] flex flex-col lg:flex-row justify-between px-8 py-5 text-md font-semibold"
+      >
+        <p class="text-[#F4F1BB] cursor-pointer">Credits</p>
+        <p class="text-[#1ED760] cursor-pointer">Powered by Spotify</p>
+        <div class="space-x-4 text-[#F4F1BB] flex">
+          <p class="cursor-pointer">Github</p>
+          <p class="cursor-pointer">Twitter</p>
+        </div>
+      </footer>
     </section>
   </body>
 </html>
