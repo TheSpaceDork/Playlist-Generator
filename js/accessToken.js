@@ -1,4 +1,4 @@
-const CLIENT_ID = "89e5a59d75d74c3a98a357a8fcc664cb";
+const CLIENT_ID = "3dc5285458fa48759206134beca949c1";
 // variable to hold token created after authentication
 let token;
 // get the hash from the url
@@ -16,7 +16,9 @@ if (token && hash) {
 
 console.log(token);
 // function to get the user logged in and check if authorization works
-const user = async() => {
+const userData = async() => {
+  // get a reference to the user div on the html file
+  const user = document.querySelector(".user");
   let data;
   // create a new url using the spotify api with the user endpoint
   const url = new URL("https://api.spotify.com/v1/me");
@@ -45,9 +47,9 @@ const user = async() => {
   }
   // convert the data gotton to json format
   const jsonData = await data.json();
-  // use aler to display the logged in user name for verification
-  alert(`Welcome ${jsonData.display_name}`);
+  const currentUser = jsonData.display_name;
+  user.textContent = currentUser;
 }
 
 // call the user function
-user();
+userData();
