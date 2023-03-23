@@ -6,7 +6,7 @@ const hash = window.location.hash;
 // if token is present in localStorage, get the token
 token = localStorage.getItem("token");
 // if token is not save in localStorage but a hash is gotten, get the token from the hash
-if (!token && hash) {
+if (token && hash) {
   token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
   // reset the hash to an empty string
   window.location.hash = ""
