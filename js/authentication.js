@@ -12,6 +12,7 @@ const SCOPES = [
   "playlist-read-private",
   "user-modify-playback-state",
   "user-read-playback-state",
+  "user-top-read",
 ];
 const SCOPES_DEL = "%20";
 const SCOPES_URL = SCOPES.join(SCOPES_DEL);

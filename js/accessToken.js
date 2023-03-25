@@ -53,3 +53,27 @@ const userData = async() => {
 
 // call the user function
 userData();
+
+// Get the mood buttons with querySelectorALL
+const moodBtn = document.querySelectorAll("#mood-btn")
+
+// Listen for click on each item of the moodBtn array of items(buttons)
+function getTopSongs() {
+  moodBtn.forEach(item => item.addEventListener("click", () =>{
+         console.log("is clicked!")
+
+            const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`
+
+       const getTopTracks = async () => {
+       await access_token
+
+  return fetch(TOP_TRACKS_ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  })
+}
+  })) 
+  
+
+}
