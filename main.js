@@ -4,6 +4,8 @@ const changeImage = (imgSrc) => {
   img.src = imgSrc;
   img.classList.add("scale");
 };
+
+
 // const redirect_uri = "http://127.0.0.1:5500/steptwo.html";
 
 // const client_id = "3dc5285458fa48759206134beca949c1";
