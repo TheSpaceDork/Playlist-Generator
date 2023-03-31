@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/9a417ab140.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./main.js" defer></script>
+
     <title>Playlist generator</title>
   </head>
   <body>
@@ -26,27 +26,29 @@
         Your playlist is ready!
       </h1>
       <div
-        class="h-[30rem] w-[90%] md:w-[80%] block mx-auto rounded-lg bg-[#181818] mt-8"
-      >
-        <h1 class="text-lg text-white">Playlist goes here</h1>
-      </div>
+        id="playlist-container"
+        class="h-[30rem] w-[90%] pt-6 md:w-[80%] block mx-auto rounded-lg bg-[#181818] mt-8 playlist-container text-lg text-white px-6 lg:px-8"
+      ></div>
       <button
+        onclick="openSpotify()"
+        id="spotify-open"
         class="bg-[#1ED760] text-[#181818] font-semibold text-lg rounded-full px-6 py-2 block mx-auto mt-8"
       >
         Open In Spotify
       </button>
- 
     </section>
 
-         <footer
-        class="fixed bottom-0 right-0 left-0 w-full bg-black h-[8rem] items-center lg:h-[4rem] flex flex-col lg:flex-row justify-between px-8 py-5 text-md font-semibold"
-      >
-        <p class="text-[#F4F1BB] cursor-pointer">Credits</p>
-        <p class="text-[#1ED760] cursor-pointer">Powered by Spotify</p>
-        <div class="space-x-4 text-[#F4F1BB] flex">
-          <p class="cursor-pointer">Github</p>
-          <p class="cursor-pointer">Twitter</p>
-        </div>
-      </footer>
+    <footer
+      class="absolute bottom-0 right-0 left-0 w-full bg-black h-[8rem] items-center lg:h-[4rem] flex flex-col lg:flex-row justify-between px-8 py-5 text-md font-semibold"
+    >
+      <p class="text-[#F4F1BB] cursor-pointer">Credits</p>
+      <p class="text-[#1ED760] cursor-pointer">Powered by Spotify</p>
+      <div class="space-x-4 text-[#F4F1BB] flex">
+        <p class="cursor-pointer">Github</p>
+        <p class="cursor-pointer">Twitter</p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="./js/userInfo.js"></script>
   </body>
 </html>
