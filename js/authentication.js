@@ -1,6 +1,6 @@
 const authBtn = document.querySelector(".authenticationBtn");
 const CLIENT_ID = "3dc5285458fa48759206134beca949c1";
-const REDIRECT_URL = "http://127.0.0.1:5500/steptwo.html";
+const REDIRECT_URL = "https://playlist-generator-sp.netlify.app/steptwo.html";
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 const SCOPES = [

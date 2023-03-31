@@ -118,7 +118,7 @@ moodBtns.forEach((btn) =>
     localStorage.setItem("playlistId", playlistId);
     localStorage.setItem("playlistName", playlistName);
 
-    const newPage = "http://127.0.0.1:5500/stepthree.html#";
+    const newPage = "https://playlist-generator-sp.netlify.app/stepthree.html";
     window.location.href = newPage;
     console.log(`Added ${tracks.length} tracks to playlist "${playlistName}"!`);
   })
