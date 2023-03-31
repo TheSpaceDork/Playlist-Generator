@@ -12,6 +12,10 @@ let data;
 const getAccessToken = async () => {
   // if token is present in localStorage, get the token
   token = sessionStorage.getItem("token");
+
+  setTimeout(() => {
+    sessionStorage.removeItem("token");
+  }, 300000);
   // if token is not save in localStorage but a hash is gotten, get the token from the hash
   if (!token && hash) {
     token = hash
