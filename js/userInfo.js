@@ -11,10 +11,10 @@ let data;
 // Function to get access token
 const getAccessToken = async () => {
   // if token is present in localStorage, get the token
-  token = sessionStorage.getItem("token");
+  token = localStorage.getItem("token");
 
   setTimeout(() => {
-    sessionStorage.removeItem("token");
+    localStorage.removeItem("token");
   }, 300000);
   // if token is not save in localStorage but a hash is gotten, get the token from the hash
   if (!token && hash) {
@@ -26,7 +26,6 @@ const getAccessToken = async () => {
     // reset the hash to an empty string
     window.location.hash = "";
     // save the token in localStorage to use later
-    sessionStorage.setItem("token", token);
   }
 };
 
@@ -66,9 +65,9 @@ const getUserProfile = async () => {
       },
     });
   }
-  // convert the data gotton to json format
+  // convert the data gotten to json format
   const jsonData = await data.json();
-  const currentUser = jsonData.display_name;
+  const currentUser = localStorage.getItem("display_name");
   user.textContent = currentUser;
 };
 
