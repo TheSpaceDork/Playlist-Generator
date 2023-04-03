@@ -67,7 +67,7 @@ const getUserProfile = async () => {
   }
   // convert the data gotten to json format
   const jsonData = await data.json();
-  const currentUser = localStorage.getItem("display_name");
+  const currentUser = jsonData.display_name;
   user.textContent = currentUser;
 };
 
